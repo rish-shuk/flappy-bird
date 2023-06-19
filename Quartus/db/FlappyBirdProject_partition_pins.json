@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "red_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "red_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "green_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "blue_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "horiz_sync_out",
+					"strict" : false
+				},
+				{
+					"name" : "vert_sync_out",
+					"strict" : false
+				},
+				{
+					"name" : "tens[0]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[1]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[3]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hundreds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hundreds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hundreds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hundreds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hundreds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hundreds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hundreds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_DAT",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "PUSH_BUTTON_1",
+					"strict" : false
+				},
+				{
+					"name" : "SWITCH_1",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

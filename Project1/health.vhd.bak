@@ -1,0 +1,31 @@
+LIBRARY IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+USE  IEEE.STD_LOGIC_ARITH.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+use IEEE.NUMERIC_STD.ALL;
+
+entity health is
+    port(
+        clk : in std_logic;
+        reset : in std_logic;
+        collision_signal_in : in std_logic;
+        health_points : out std_logic_vector(9 downto 0)
+    );
+end health;
+
+architecture behavior of health is
+begin
+
+    process(clk, reset)
+        variable v_health : std_logic_vector(9 downto 0) := CONV_STD_LOGIC_VECTOR(200, 10);
+    begin
+        if reset = '1' then
+            v_health := CONV_STD_LOGIC_VECTOR(200, 10);
+        elsif (rising_edge(clk)) then
+            if collision_signal_in = '1' then
+                v_health := v_health - CONV_STD_LOGIC_VECTOR(1, 10);
+            end if;
+            health_points <= v_health;
+        end if;
+    end process;
+end Behavioral;

@@ -1,0 +1,62 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY collisions is
+    PORT(
+        clk : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
+        ball_signal : IN STD_LOGIC;
+        pipe_signal : IN STD_LOGIC;
+        bonus1_signal : IN STD_LOGIC;
+        bonus2_signal : IN STD_LOGIC;
+        pipe_collision : OUT STD_LOGIC;
+        bonus1_collision : OUT STD_LOGIC;
+        bonus2_collision : OUT STD_LOGIC
+    );
+END collisions;
+
+architecture behavior of collisions is
+    signal ball_signal_reg : STD_LOGIC;
+    signal pipe_signal_reg : STD_LOGIC;
+    signal pipe_collision_reg : STD_LOGIC;
+	 signal bonus1_signal_reg : STD_LOGIC;
+    signal bonus2_signal_reg : STD_LOGIC;
+begin
+    process(clk, reset)
+    begin
+        if reset = '1' then
+            ball_signal_reg <= '0';
+            pipe_signal_reg <= '0';
+            bonus1_signal_reg <= '0';
+            bonus2_signal_reg <= '0';
+        elsif rising_edge(clk) then
+            ball_signal_reg <= ball_signal;
+            pipe_signal_reg <= pipe_signal;
+            bonus1_signal_reg <= bonus1_signal;
+            bonus2_signal_reg <= bonus2_signal;
+
+            -- Collision detection
+            if ball_signal_reg = '1' and pipe_signal_reg = '1' then
+                pipe_collision_reg <= '1';
+            else
+                pipe_collision_reg <= '0';
+            end if;
+
+            -- Bonus 1 collision detection
+            if ball_signal_reg = '1' and bonus1_signal_reg = '1' then
+                bonus1_collision <= '1';
+            else
+                bonus1_collision <= '0';
+            end if;
+
+            -- Bonus 2 collision detection
+            if ball_signal_reg = '1' and bonus2_signal_reg = '1' then
+                bonus2_collision <= '1';
+            else
+                bonus2_collision <= '0';
+            end if;
+        end if;
+    end process;
+    pipe_collision <= pipe_collision_reg;
+
+end architecture behavior;
